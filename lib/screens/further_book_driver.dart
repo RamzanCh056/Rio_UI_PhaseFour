@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rio_ui_screens/screens/stations.dart';
 
 class FurtherBookDriver extends StatefulWidget {
   const FurtherBookDriver({Key? key}) : super(key: key);
@@ -196,11 +197,11 @@ class _FurtherBookDriverState extends State<FurtherBookDriver> {
                                 CircleAvatar(
                                   child: IconButton(
                                     onPressed: () {
-                                      // Navigator.push(
-                                      //     context,
-                                      //     MaterialPageRoute(
-                                      //         builder: (context) =>
-                                      //             FurtherBookDriver()));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Stations()));
                                     },
                                     icon: Icon(Icons.arrow_forward),
                                   ),

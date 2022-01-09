@@ -2,6 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:rio_ui_screens/screens/earnings.dart';
+import 'package:rio_ui_screens/screens/hitory.dart';
+import 'package:rio_ui_screens/screens/notifications.dart';
 import 'package:rio_ui_screens/screens/set_destination_page.dart';
 import 'package:rio_ui_screens/screens/suggest_route_page.dart';
 
@@ -96,10 +99,8 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white),
               ),
               onTap: () {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => InviteFriend()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Earnings()));
               },
             ),
             ListTile(
@@ -112,10 +113,8 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white),
               ),
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //       builder: (context) =>   SuportPage()),
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => History()));
 
                 // );
               },
@@ -192,7 +191,12 @@ class _HomePageState extends State<HomePage> {
                         icon: Icon(Icons.notification_add),
                         color: Colors.indigo,
                         iconSize: 35,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Notifications()));
+                        },
                       ),
                     ))),
             Positioned(
